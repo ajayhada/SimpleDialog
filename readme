@@ -36,7 +36,9 @@ How to use ?
 1, Include libraries 
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.js"></script>
-<script type="text/javascript" src="http://dl.dropbox.com/u/12269376/SimpleDialog-1.0.js"></script>
+
+you can include script form github.
+<script type="text/javascript" src="https://github.com/downloads/ajayhada/SimpleDialog/SimpleDialog-1.0.js"></script>
 
 
 2,Write a popup div
