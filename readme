@@ -1,0 +1,60 @@
+A Simple flexible dialogbox popup plugin.
+
+This plugin has only two methods
+--------------------------------------
+1, selector.showpopup(settings);
+2, selector.closepopup();
+
+Settings parameter description
+--------------------------------------
+Settings{
+    left: 100, // left position of dialog box
+    top: 100, // top position of dialog box 
+    height: 100, // height of dialog pox
+    width: 100, width of dialog box
+    draggable: true, // set this flag true to make dialog draggable
+    draggableContainer: "document", // set dialog draggable boundaries , default is document, you can pass $("#divid")
+    enableclose:true, // set true to show close link
+    closeIcon:"close_icon.jpg", // set close icon
+    ismodal: true, // create model dialog 
+    overlayStyle:{
+    opacity: 0.1, // set overlay opacity
+    background: "'black'", // set overlay background color
+    extraCSS:"" // you can provide extra css properties
+  }
+  popupStyle:{
+    border: 3, // border width of dialog box
+    bordercolor: '#000', // border color of dialog box
+    borderradius: 10, // border radius of dialog // do not work in IE
+    background:'#dddddd', // dialogbox background color.
+    extraCSS:'' // you can provide extra css properties
+  }
+}
+
+How to use ?
+----------------------------------------
+1, Include jquery library 
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.js"></script>
+
+2,Write a popup div
+----------------------------------------
+<div class="Hello" style="display:none;">
+<h1>Hello guys</h1>
+<b>Hello guys</b>
+<b>Hello guys</b>
+</div>
+
+3, write show hide methods
+----------------------------------------
+function closePopup(){
+    $('.Hello').closepopup();   
+}
+
+function show(){
+$('.Hello').showpopup({enableclose:true,closeIcon:"close_icon.gif",ismodal:true,overlayStyle:{background:"RED"}});
+}
+
+3,Create an event to show the popup
+-----------------------------------------
+<button onclick="show();">Click to open popup box</button>
