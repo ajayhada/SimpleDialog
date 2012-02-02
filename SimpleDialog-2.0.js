@@ -14,7 +14,7 @@
  */
 (function($){
 
-var settings;
+ 	var settings;
 	var count = 0;
 	
 	$.fn.closepopup = function(id) {
