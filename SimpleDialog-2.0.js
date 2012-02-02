@@ -9,12 +9,12 @@
  * Released: January 27, 2012
  * 
  *  
- *  &lt;script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"&gt;&lt;/script&gt;
- *  &lt;script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.js"&gt;&lt;/script&gt;
+ *  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+ *  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.js"></script>
  */
 (function($){
 
- 	var settings;
+var settings;
 	var count = 0;
 	
 	$.fn.closepopup = function(id) {
@@ -62,14 +62,14 @@
 	var closebuttoncss ='color:BLUE;margin-top:5px;margin-right:5px;float:right;';
 	if(settings.enableclose){
 		var closeButton = 'close';
-		if(settings.closeIcon.length&gt;0){
-			closeButton = '&lt;img src="'+settings.closeIcon+'"/&gt;'
+		if(settings.closeIcon.length>0){
+			closeButton = '<img src="'+settings.closeIcon+'"/>'
 		}
-		innerHtml = '&lt;a href="javascript:$(this).closepopup('+count+')" style="'+closebuttoncss+'"&gt;'+closeButton+'&lt;/a&gt;';	}
+		innerHtml = '<a href="javascript:$(this).closepopup('+count+')" style="'+closebuttoncss+'">'+closeButton+'</a>';	}
 	
 	var popupcss='border:'+settings.popupStyle.border+'px solid '+settings.popupStyle.bordercolor+'; border-radius:'+settings.popupStyle.borderradius+'px; background:'+settings.popupStyle.background+';z-index:4000;' + settings.popupStyle.extraCSS;
     
-	var popup = $('&lt;DIV id="simple_popup'+count+'" style="'+popupcss+'"&gt;&lt;/DIV&gt;');
+	var popup = $('<DIV id="simple_popup'+count+'" style="'+popupcss+'"></DIV>');
     
 	popup.html(innerHtml + this.html());
     
@@ -83,13 +83,13 @@
 	var overlaycss='';
 	if(settings.ismodal){
 		overlaycss='position: absolute;top: 0;left: 0;width: 100%;height: 100%;z-index:100;opacity:'+settings.overlayStyle.opacity+';filter:Alpha(Opacity=30);background:'+settings.overlayStyle.background+';'+ + settings.overlayStyle.extraCSS;
-		var overlay = $('&lt;div id="simple_popup_overlay" style="'+overlaycss+'" &gt;&lt;/div&gt;');
+		var overlay = $('<div id="simple_popup_overlay" style="'+overlaycss+'" ></div>');
 		overlay.appendTo(document.body);
 		overlay.css({ height: $(document).height() });
 		overlay.fadeIn(100);
 	}
 	
-	if(settings.hideinterval&gt;0){
+	if(settings.hideinterval>0){
 		setTimeout('$(this).closepopup('+count+')',settings.hideinterval);
 	}
 	if(settings.hideOnClick){
