@@ -63,7 +63,7 @@ var settings;
 	if(settings.enableclose){
 		var closeButton = 'close';
 		if(settings.closeIcon.length>0){
-			closeButton = '<img src="'+settings.closeIcon+'"/>'
+			closeButton = '<img src="'+settings.closeIcon+'"/>';
 		}
 		innerHtml = '<a href="javascript:$(this).closepopup('+count+')" style="'+closebuttoncss+'">'+closeButton+'</a>';	}
 	
