@@ -1,6 +1,6 @@
 A Simple flexible customizable jquery popup dialogbox plugin.
 
-This plugin has only two methods
+Plugin Methods
 --------------------------------------
 1, selector.showpopup(settings); // to create(show) popup dialog box
 2, selector.closepopup(id); // to close specific popup dialog box
@@ -18,22 +18,18 @@ Settings{
     enableclose:true, // set true to show close link
     closeIcon:"close_icon.jpg", // set close icon
     ismodal: true, // create model dialog 
+    
     overlayStyle:{
-    opacity: 0.1, // set overlay opacity
-    background: "'black'", // set overlay background color
-    extraCSS:"" // you can provide extra css properties
-  },
-  overlayStyle:{
-		opacity: 0.1, // set opacity for overlay
-		background:'black', // set overlay div color
-		extraCSS:'' // set css properites to customize overlay css 
-	},
-  popupStyle:{
-    border: 3, // border width of dialog box
-    bordercolor: '#000', // border color of dialog box
-    borderradius: 10, // border radius of dialog // do not work in IE
-    background:'#dddddd', // dialogbox background color.
-    extraCSS:'' // you can provide extra css properties to customize popup window
+	opacity: 0.1, // set opacity for overlay
+	background:'black', // set overlay div color
+	extraCSS:'' // set css properites to customize overlay css 
+    },
+    popupStyle:{
+        border: 3, // border width of dialog box
+        bordercolor: '#000', // border color of dialog box
+        borderradius: 10, // border radius of dialog // do not work in IE
+        background:'#dddddd', // dialogbox background color.
+       extraCSS:'' // you can provide extra css properties to customize popup window
   }
 }
 
