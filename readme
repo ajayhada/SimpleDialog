@@ -1,0 +1,64 @@
+A Simple flexible customizable jquery popup dialogbox plugin.
+*************
+
+## Plugin Methods
+************
+1. selector.showpopup(settings); // to create(show) popup dialog box
+2. selector.closepopup(id); // to close specific popup dialog box
+3. selector.closeAllpopup(); // to close all popup diabog box instances 
+
+## Settings parameter description
+    Settings{
+        left: 100, // left position of dialog box''
+        top: 100, // top position of dialog box 
+        hideinterval: 0, // can provide auto hide interval
+        hideOnClick: false, // set true to hide popup on click
+        draggable: true, // set this flag true to make dialog draggable
+        draggableContainer: "document", // set dialog draggable boundaries , default is document, you can pass $("#divid")
+        enableclose:true, // set true to show close link
+        closeIcon:"close_icon.jpg", // set close icon
+        ismodal: true, // create model dialog 
+        overlayStyle:{
+            opacity: 0.1, // set opacity for overlay
+            background:'black', // set overlay div color
+            extraCSS:'' // set css properites to customize overlay css 
+        },
+        popupStyle:{
+            border: 3, // border width of dialog box
+            bordercolor: '#000', // border color of dialog box
+            borderradius: 10, // border radius of dialog // do not work in IE
+            background:'#dddddd', // dialogbox background color.
+             extraCSS:'' // you can provide extra css properties to customize popup window
+        }
+    }
+
+***
+
+## How to use ?
+### Include libraries 
+     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.js"></script>
+     <script type="text/javascript" src="https://github.com/downloads/ajayhada/SimpleDialog/SimpleDialog-2.0.js"></script>
+
+***
+
+### Write a popup div
+    <div class="Hello" style="display:none;">
+        <h1>Hello guys</h1>
+        <b>Hello guys</b>
+        <b>Hello guys</b>
+    </div>
+
+### write show hide methods
+    function closePopup(){
+        $('.Hello').closeAllpopup();   
+    }
+
+    function show(){
+        $('.Hello').showpopup({enableclose:true,closeIcon:"close_icon.gif",ismodal:true,overlayStyle:{background:"RED"}});
+   }
+
+### Create an event to show the popup
+    <button onclick="show();">Click to open popup box</button>
+
+***
